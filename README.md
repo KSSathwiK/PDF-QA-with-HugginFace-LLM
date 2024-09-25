@@ -10,17 +10,31 @@ My model "google-bert-large-uncased-whole-word-masking-finetuned-squad".
 - Ask questions about the content of the PDF.
 - Get answers powered by a Hugging Face model.
 
-## Requirements
+## Environment Variables
 
-To run this application, you will need the following Python packages:
+You'll need to create a `.env` file in the root of the project directory with your Hugging Face API token:
 
-- `streamlit`
-- `huggingface-hub`
-- `pypdf`
-- `python-dotenv`
-- `requests`
+```
+HF_API_TOKEN=your_huggingface_api_token_here
+```
 
-You can install all the required packages by running:
+## Running the App
 
-```bash
-pip install -r requirements.txt
+1. Create and activate a virtual environment:
+   ```bash
+   python -m venv venv
+   # Activate on Windows
+   venv\Scripts\activate
+   # Activate on macOS/Linux
+   source venv/bin/activate
+   ```
+
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. Run the Streamlit app:
+   ```bash
+   streamlit run app.py
+   ```
